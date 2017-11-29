@@ -109,4 +109,10 @@ let g:jsx_ext_required = 0
 filetype plugin indent on
 syntax enable
 
+ino " ""<left>
+ino ' ''<left>
+ino ( ()<left>
+ino [ []<left>
+ino { {}<left>
+ino {<CR> {<CR>}<ESC>O
 
