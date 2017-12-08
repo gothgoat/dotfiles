@@ -16,17 +16,17 @@ set smartcase     " ignore case if search pattern is all lowercase,
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
-set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
 
 
+filetype plugin indent on
 syntax enable
 set background=dark
 
-set softtabstop=4
-set tabstop=4
-set shiftwidth=4
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 set showcmd
@@ -95,8 +95,10 @@ map <leader>' :call NerdToggleFocus()<cr>
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+"nnoremap <Tab> :bnext<CR>
+"nnoremap <S-Tab> :bprevious<CR>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprevious<CR>
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 
@@ -106,13 +108,5 @@ nnoremap <C-k> :m .-2<CR>==
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
-filetype plugin indent on
-syntax enable
 
-ino " ""<left>
-ino ' ''<left>
-ino ( ()<left>
-ino [ []<left>
-ino { {}<left>
-ino {<CR> {<CR>}<ESC>O
 
