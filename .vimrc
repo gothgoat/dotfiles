@@ -48,24 +48,26 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'morhetz/gruvbox'
-Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
-
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ap/vim-buftabline'
-Plug 'scrooloose/nerdcommenter'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
-Plug 'easymotion/vim-easymotion'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-vinegar'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+imap <c-x><c-o> <plug>(fzf-complete-line)
+map <leader>b :Buffers<cr>
+map <leader>f :Files<cr>
+map <leader>g :GFiles<cr>
+map <leader>t :Tags<cr>
 
 
 colorscheme gruvbox
-
 
 
 " Enable the list of buffers
@@ -73,27 +75,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-
-
-autocmd BufEnter * lcd %:p:h
-
-
-
-function NerdFocus()
-  :NERDTreeFind
-  wincmd p
-endfunction  
-
-function NerdToggleFocus()
-  :NERDTreeToggle
-  wincmd p
-endfunction  
-
-map <leader>; :call NerdFocus()<cr>
-map <leader>' :call NerdToggleFocus()<cr>
-
-
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "nnoremap <Tab> :bnext<CR>
 "nnoremap <S-Tab> :bprevious<CR>
@@ -103,10 +84,12 @@ nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 
 
-
-
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
+
+"use c for closing current buffer only (plays nice with nerdtree)
+nnoremap c :bp\|bd #<CR>
+
 
 
 
