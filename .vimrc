@@ -6,7 +6,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 
 
-set nowrap
+set wrap
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
@@ -31,6 +31,7 @@ set expandtab
 
 set showcmd
 set cursorline
+set wildmode=longest,list,full
 set wildmenu
 set lazyredraw
 set showmatch
@@ -55,7 +56,8 @@ Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-vinegar'
+"Plug 'tpope/vim-vinegar'
+Plug 'jeetsukumaran/vim-filebeagle'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -87,9 +89,20 @@ nnoremap <C-k> :m .-2<CR>==
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
-"use c for closing current buffer only (plays nice with nerdtree)
+"use c for closing current buffer only
 nnoremap c :bp\|bd #<CR>
 
+set pastetoggle=<F2>
+
+augroup netrw_mapping
+    autocmd!
+    autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+    noremap <buffer> c :bd<CR>
+endfunction
 
 
+autocmd BufEnter * silent! lcd %:p:h
 
