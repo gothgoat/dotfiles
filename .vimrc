@@ -56,15 +56,18 @@ Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-"Plug 'tpope/vim-vinegar'
 Plug 'jeetsukumaran/vim-filebeagle'
+"Plug 'valloric/youcompleteme'
+Plug 'wincent/terminus'
+"Plug 'prettier/prettier'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 imap <c-x><c-o> <plug>(fzf-complete-line)
 map <leader>b :Buffers<cr>
-map <leader>f :Files<cr>
+map <leader>' :Files<cr>
 map <leader>g :GFiles<cr>
 map <leader>t :Tags<cr>
 
@@ -78,8 +81,6 @@ let g:airline#extensions#tabline#enabled = 1
 " " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-"nnoremap <Tab> :bnext<CR>
-"nnoremap <S-Tab> :bprevious<CR>
 nnoremap <C-l> :bnext<CR>
 nnoremap <C-h> :bprevious<CR>
 nnoremap <C-j> :m .+1<CR>==
@@ -93,15 +94,6 @@ let g:jsx_ext_required = 0
 nnoremap c :bp\|bd #<CR>
 
 set pastetoggle=<F2>
-
-augroup netrw_mapping
-    autocmd!
-    autocmd filetype netrw call NetrwMapping()
-augroup END
-
-function! NetrwMapping()
-    noremap <buffer> c :bd<CR>
-endfunction
 
 
 autocmd BufEnter * silent! lcd %:p:h
