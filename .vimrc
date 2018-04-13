@@ -18,7 +18,7 @@ set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set visualbell           " don't beep
 set noerrorbells         " don't beep
-
+set mouse=a
 
 filetype plugin indent on
 syntax enable
@@ -60,7 +60,7 @@ Plug 'jeetsukumaran/vim-filebeagle'
 "Plug 'valloric/youcompleteme'
 Plug 'wincent/terminus'
 "Plug 'prettier/prettier'
-
+Plug 'mattn/emmet-vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -98,3 +98,9 @@ set pastetoggle=<F2>
 
 autocmd BufEnter * silent! lcd %:p:h
 
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
