@@ -104,3 +104,7 @@ let g:user_emmet_settings = {
     \      'extends' : 'jsx',
     \  },
   \}
+
+
+
+hi! link jsFuncCall GruvboxFg2
