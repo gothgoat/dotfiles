@@ -62,6 +62,8 @@ Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'wincent/terminus'
 "Plug 'prettier/prettier'
 Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdcommenter'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -99,7 +101,7 @@ set pastetoggle=<F2>
 
 autocmd BufEnter * silent! lcd %:p:h
 
-let g:user_emmet_leader_key='<Tab>'
+"let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
     \      'extends' : 'jsx',
