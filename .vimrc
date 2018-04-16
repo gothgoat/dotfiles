@@ -58,15 +58,15 @@ Plug 'elzr/vim-json'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jeetsukumaran/vim-filebeagle'
-"Plug 'valloric/youcompleteme'
 Plug 'wincent/terminus'
-"Plug 'prettier/prettier'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+
 
 imap <c-x><c-o> <plug>(fzf-complete-line)
 map <leader>b :Buffers<cr>
@@ -111,3 +111,4 @@ let g:user_emmet_settings = {
 
 
 hi! link jsFuncCall GruvboxFg2
+
