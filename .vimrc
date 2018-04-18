@@ -62,7 +62,6 @@ Plug 'wincent/terminus'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
-Plug 'thaerkh/vim-workspace'
 Plug 'tpope/vim-obsession'
 
 " List ends here. Plugins become visible to Vim after this call.
@@ -100,8 +99,7 @@ nnoremap c :bp\|bd #<CR>
 
 set pastetoggle=<F2>
 
-
-"autocmd BufEnter * silent! lcd %:p:h
+autocmd BufEnter * silent! lcd %:p:h
 
 "let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
@@ -110,9 +108,4 @@ let g:user_emmet_settings = {
     \  },
   \}
 
-
-
 hi! link jsFuncCall GruvboxFg2
-
-nnoremap <leader>s :ToggleWorkspace<CR>
-
