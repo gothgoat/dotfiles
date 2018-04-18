@@ -63,6 +63,7 @@ Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-obsession'
+Plug 'prettier/vim-prettier'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -109,3 +110,9 @@ let g:user_emmet_settings = {
   \}
 
 hi! link jsFuncCall GruvboxFg2
+
+
+autocmd FileType javascript set formatprg=prettier\ --stdin
+let g:prettier#config#tab_width = 4
+let g:prettier#config#print_width = 100
+
