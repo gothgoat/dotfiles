@@ -4,7 +4,9 @@ set hlsearch
 set incsearch
 nnoremap <leader><space> :nohlsearch<CR>
 
-
+set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
 
 set wrap
 set autoindent    " always set autoindenting on
