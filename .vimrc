@@ -8,6 +8,8 @@ set undodir=~/.vim/.undo//
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swp//
 
+set clipboard=unnamed
+
 set wrap
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
@@ -25,11 +27,11 @@ set mouse=a
 syntax enable
 set background=dark
 filetype plugin indent on
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
+" show existing tab with 2 spaces width
+set tabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+" On pressing tab, insert 2 spaces
 set expandtab
 
 set showcmd
@@ -66,6 +68,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-obsession'
 Plug 'prettier/vim-prettier'
+Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -115,6 +119,12 @@ hi! link jsFuncCall GruvboxFg2
 
 
 autocmd FileType javascript set formatprg=prettier\ --stdin
-let g:prettier#config#tab_width = 4
+let g:prettier#config#tab_width = 2
 let g:prettier#config#print_width = 100
 
+
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+
+set updatetime=100
