@@ -67,6 +67,7 @@ Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-surround'
 Plug 'prettier/vim-prettier'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
@@ -104,6 +105,7 @@ let g:jsx_ext_required = 0
 "use c for closing current buffer only
 nnoremap c :bp\|bd #<CR>
 
+
 set pastetoggle=<F2>
 
 autocmd BufEnter * silent! lcd %:p:h
@@ -128,3 +130,14 @@ let g:ale_fixers = {
 \}
 
 set updatetime=100
+
+
+
+let g:surround_no_mappings = 1
+nmap ds  <Plug>Dsurround
+nmap Cs  <Plug>Csurround
+nmap ys  <Plug>Ysurround
+nmap yS  <Plug>YSurround
+nmap yss <Plug>Yssurround
+nmap ySs <Plug>YSsurround
+nmap ySS <Plug>YSsurround
