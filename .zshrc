@@ -101,3 +101,7 @@ export NVM_DIR="$HOME/.nvm"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias opc="open -a 'Google Chrome'"
 alias lst="tree -I 'node*'"
+
+
+
+export TERM=xterm-256color
