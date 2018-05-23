@@ -71,6 +71,7 @@ Plug 'tpope/vim-surround'
 Plug 'prettier/vim-prettier'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
+Plug 'leafgarland/typescript-vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
