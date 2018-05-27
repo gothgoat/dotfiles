@@ -79,8 +79,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/deoplete.nvim'
 
 "Javascript Plugins
-Plug 'carlitux/deoplete-ternjs'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx', 'typescript'] }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' , 'for': ['javascript', 'javascript.jsx', 'typescript']}
 
 "Typescript Plugins
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
@@ -183,3 +183,12 @@ nmap ySS <Plug>YSsurround
 let g:prettier#config#semi = 'false'
 
 
+
+
+"Add extra filetypes
+let g:deoplete#sources#ternjs#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ 'vue',
+                \ '...'
+                \ ]

@@ -105,3 +105,5 @@ alias lst="tree -I 'node*'"
 
 
 export TERM=xterm-256color
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
