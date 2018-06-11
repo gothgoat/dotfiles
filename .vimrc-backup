@@ -1,5 +1,5 @@
 set hidden
-set number relativenumber
+set number
 set hlsearch
 set incsearch
 nnoremap <leader><space> :nohlsearch<CR>
@@ -82,7 +82,9 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' , 'for'
 "Typescript Plugins
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Quramy/tsuquyomi', { 'do': 'npm install -g typescript' }
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+Plug 'mhartington/deoplete-typescript'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 
 
 " List ends here. Plugins become visible to Vim after this call.
