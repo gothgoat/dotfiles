@@ -72,6 +72,9 @@ Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'leafgarland/typescript-vim'
 Plug 'itchyny/lightline.vim'
+Plug 'easymotion/vim-easymotion'
+
+
 
 Plug 'Shougo/deoplete.nvim'
 
@@ -109,7 +112,16 @@ let g:tsuquyomi_javascript_support = 1
 let g:tsuquyomi_auto_open = 1
 let g:tsuquyomi_disable_quickfix = 1
 
-"imap <c-x><c-o> <plug>(fzf-complete-line)
+"Add extra filetypes
+let g:deoplete#sources#ternjs#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ 'vue',
+                \ '...'
+                \ ]
+
+
+imap <c-q> <plug>(fzf-complete-line)
 map <leader>b :Buffers<cr>
 map <leader>' :Files<cr>
 map <leader>g :GFiles<cr>
@@ -182,10 +194,3 @@ let g:prettier#config#semi = 'false'
 
 
 
-"Add extra filetypes
-let g:deoplete#sources#ternjs#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ 'vue',
-                \ '...'
-                \ ]
