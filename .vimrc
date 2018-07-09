@@ -22,7 +22,7 @@ set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set visualbell           " don't beep
 set noerrorbells         " don't beep
-set mouse=a
+"set mouse=a
 
 syntax enable
 set background=dark
@@ -61,7 +61,7 @@ Plug 'elzr/vim-json'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jeetsukumaran/vim-filebeagle'
-Plug 'wincent/terminus'
+"Plug 'wincent/terminus'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
@@ -167,6 +167,10 @@ hi! link jsFuncCall GruvboxFg2
 autocmd FileType javascript set formatprg=prettier\ --stdin
 let g:prettier#config#tab_width = 2
 let g:prettier#config#print_width = 100
+" print semicolons
+" Prettier default: true
+let g:prettier#config#semi = 'false'
+let g:prettier#config#trailing_comma = 'none'
 
 
 let g:ale_fixers = {
@@ -185,12 +189,11 @@ nmap yS  <Plug>YSurround
 nmap yss <Plug>Yssurround
 nmap ySs <Plug>YSsurround
 nmap ySS <Plug>YSsurround
-
-
-" print semicolons
-" Prettier default: true
-let g:prettier#config#semi = 'false'
+xmap S   <Plug>VSurround
 
 
 
 
+
+
+autocmd InsertEnter * :setlocal nohlsearch
