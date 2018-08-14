@@ -73,6 +73,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'leafgarland/typescript-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'posva/vim-vue'
 
 
 
@@ -197,3 +198,13 @@ xmap S   <Plug>VSurround
 
 
 autocmd InsertEnter * :setlocal nohlsearch
+
+
+
+
+
+autocmd FileType vue syntax sync fromstart
+let g:vue_disable_pre_processors=1
+
+
+

@@ -4,6 +4,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/fezo/.oh-my-zsh
 export PATH="$PATH:`yarn global bin`"
+export DATABASE_URL=postgres://postgres:postgres@0.0.0.0:5432/entrails-obfuscate
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -101,6 +110,7 @@ export NVM_DIR="$HOME/.nvm"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias opc="open -a 'Google Chrome'"
 alias lst="tree -I 'node*'"
+alias lsl="ls -la"
 
 
 

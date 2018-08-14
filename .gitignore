@@ -1,0 +1,3 @@
+# globally ignoring .tern-port
+*.tern-port
+*/**/.tern-port
