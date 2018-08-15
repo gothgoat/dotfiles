@@ -74,7 +74,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'posva/vim-vue'
-
+Plug 'junegunn/goyo.vim'
 
 
 Plug 'Shougo/deoplete.nvim'
@@ -166,12 +166,12 @@ hi! link jsFuncCall GruvboxFg2
 
 
 autocmd FileType javascript set formatprg=prettier\ --stdin
-let g:prettier#config#tab_width = 2
-let g:prettier#config#print_width = 100
-" print semicolons
-" Prettier default: true
-let g:prettier#config#semi = 'false'
-let g:prettier#config#trailing_comma = 'none'
+"let g:prettier#config#tab_width = 2
+"let g:prettier#config#print_width = 100
+"" print semicolons
+"" Prettier default: true
+"let g:prettier#config#semi = 'false'
+"let g:prettier#config#trailing_comma = 'none'
 
 
 let g:ale_fixers = {

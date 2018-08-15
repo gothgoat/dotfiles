@@ -4,6 +4,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/fezo/.oh-my-zsh
 export PATH="$PATH:`yarn global bin`"
+
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+
 export DATABASE_URL=postgres://postgres:postgres@0.0.0.0:5432/entrails-obfuscate
 
 export LC_ALL=en_US.UTF-8
