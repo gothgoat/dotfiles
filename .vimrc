@@ -61,20 +61,17 @@ Plug 'elzr/vim-json'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jeetsukumaran/vim-filebeagle'
-"Plug 'wincent/terminus'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
-Plug 'prettier/vim-prettier'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'leafgarland/typescript-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'posva/vim-vue'
-Plug 'junegunn/goyo.vim'
 
 
 Plug 'Shougo/deoplete.nvim'
@@ -165,20 +162,15 @@ let g:user_emmet_settings = {
 hi! link jsFuncCall GruvboxFg2
 
 
-autocmd FileType javascript set formatprg=prettier\ --stdin
-"let g:prettier#config#tab_width = 2
-"let g:prettier#config#print_width = 100
-"" print semicolons
-"" Prettier default: true
-"let g:prettier#config#semi = 'false'
-"let g:prettier#config#trailing_comma = 'none'
-
-
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
+\   'jsx': ['eslint'],
+\   'vue': ['eslint'],
 \}
 
 set updatetime=100
+
+nmap <leader>a <Plug>(ale_fix)
 
 
 
