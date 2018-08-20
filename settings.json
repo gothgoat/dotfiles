@@ -1,0 +1,51 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": false,
+    "workbench.editor.enablePreview": false,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Roboto Mono', Hack, 'Source Code Pro'",
+    "editor.fontSize": 12,
+    "window.zoomLevel": -1,
+    "editor.tabSize": 2,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.fontWeight": "300",
+    "editor.tabCompletion": true,
+    "emmet.includeLanguages": {
+        "jsx-sublime-babel-tags": "javascriptreact",
+        "javascript": "javascriptreact"  
+    },
+    "emmet.triggerExpansionOnTab": true,
+    // "workbench.colorTheme": "Gruvbox Dark (Hard)",
+    "workbench.colorTheme": "September Steel",
+    "workbench.sideBar.location": "left",
+    "workbench.editor.showTabs": true,
+    "editor.minimap.enabled": false,
+    "eslint.enable": true,
+    "eslint.validate": [
+        {
+          "language": "vue",
+          "autoFix": true
+        },
+        {
+          "language": "html",
+          "autoFix": true
+        },
+        {
+          "language": "javascript",
+          "autoFix": true
+        }
+      ],
+      "vim.easymotion": true,
+      "vim.incsearch": true,
+      "vim.useSystemClipboard": true,
+      "vim.hlsearch": true,
+      "keyboard.dispatch": "keyCode",
+      "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ]
+
+}

@@ -73,7 +73,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'posva/vim-vue'
 
-
 Plug 'Shougo/deoplete.nvim'
 
 "Javascript Plugins
