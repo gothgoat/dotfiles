@@ -6,10 +6,10 @@
     "editor.fontLigatures": true,
     "editor.fontFamily": "'Roboto Mono', Hack, 'Source Code Pro'",
     "editor.fontSize": 12,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "editor.tabSize": 2,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.fontWeight": "300",
+    "editor.fontWeight": "100",
     "editor.tabCompletion": true,
     "emmet.includeLanguages": {
         "jsx-sublime-babel-tags": "javascriptreact",

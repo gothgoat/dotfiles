@@ -54,8 +54,9 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-buftabline'
-Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html', 'vue'] }
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -125,7 +126,8 @@ map <leader>g :GFiles<cr>
 map <leader>t :Tags<cr>
 
 
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme nord 
 
 
 " Enable the list of buffers
@@ -194,8 +196,13 @@ autocmd InsertEnter * :setlocal nohlsearch
 
 
 
-autocmd FileType vue syntax sync fromstart
+
 let g:vue_disable_pre_processors=1
+autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.pug
 
 
 
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
