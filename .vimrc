@@ -173,7 +173,8 @@ set updatetime=100
 
 nmap <leader>a <Plug>(ale_fix)
 
-
+let g:ale_open_list = 1
+let g:ale_list_window_size = 2
 
 let g:surround_no_mappings = 1
 nmap ds  <Plug>Dsurround
@@ -190,12 +191,6 @@ xmap S   <Plug>VSurround
 
 
 
-autocmd InsertEnter * :setlocal nohlsearch
-
-
-
-
-
 
 let g:vue_disable_pre_processors=1
 autocmd FileType vue syntax sync fromstart
@@ -206,3 +201,6 @@ autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.
 let g:lightline = {
       \ 'colorscheme': 'nord',
       \ }
+
+
+
