@@ -81,13 +81,20 @@ Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx', 'type
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' , 'for': ['javascript', 'javascript.jsx', 'typescript']}
 
 "Typescript Plugins
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Quramy/tsuquyomi', { 'do': 'npm install -g typescript' }
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+"Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+"Plug 'Quramy/tsuquyomi', { 'do': 'npm install -g typescript' }
+"Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+
+" mucomplete settings
+
+autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
@@ -106,9 +113,11 @@ let g:tern_request_timeout = 6000
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
 let g:deoplete#sources#tss#javascript_support = 1
-let g:tsuquyomi_javascript_support = 1
-let g:tsuquyomi_auto_open = 1
-let g:tsuquyomi_disable_quickfix = 1
+
+
+""let g:tsuquyomi_javascript_support = 1
+""let g:tsuquyomi_auto_open = 1
+""let g:tsuquyomi_disable_quickfix = 1
 
 "Add extra filetypes
 let g:deoplete#sources#ternjs#filetypes = [
@@ -142,7 +151,6 @@ nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 
 
-let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
 "use c for closing current buffer only
@@ -172,6 +180,7 @@ let g:ale_fixers = {
 set updatetime=100
 
 nmap <leader>a <Plug>(ale_fix)
+map <leader>s :syntax sync fromstart<CR>
 
 let g:ale_open_list = 1
 let g:ale_list_window_size = 2
@@ -192,7 +201,6 @@ xmap S   <Plug>VSurround
 
 
 
-let g:vue_disable_pre_processors=1
 autocmd FileType vue syntax sync fromstart
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.pug
 
