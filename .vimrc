@@ -53,6 +53,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'itchyny/lightline.vim'
   Plug 'easymotion/vim-easymotion'
+  Plug 'jiangmiao/auto-pairs'
   " syntax & autocomplete
   Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html', 'vue'] }
   Plug 'mxw/vim-jsx'
