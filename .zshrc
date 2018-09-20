@@ -123,3 +123,7 @@ alias lsl="ls -la"
 export TERM=xterm-256color
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+  # Set Spaceship ZSH as a prompt
+  autoload -U promptinit; promptinit
+  prompt spaceship

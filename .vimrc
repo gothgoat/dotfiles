@@ -40,7 +40,6 @@ syntax enable
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
-  " generic plugins
   Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'ap/vim-buftabline'
   Plug 'arcticicestudio/nord-vim'
@@ -54,22 +53,19 @@ call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'jiangmiao/auto-pairs'
-  " syntax & autocomplete
-  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html', 'vue'] }
-  Plug 'mxw/vim-jsx'
-  Plug 'elzr/vim-json'
+  Plug 'morhetz/gruvbox'
+  Plug 'sheerun/vim-polyglot'
   Plug 'mattn/emmet-vim'
-  Plug 'posva/vim-vue'
+  Plug 'romainl/vim-qf'
   Plug 'Shougo/deoplete.nvim'
   Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx', 'typescript'] }
   Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' , 'for': ['javascript', 'javascript.jsx', 'typescript']}
-  "Plug 'leafgarland/typescript-vim'
-  "Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-  "Plug 'Quramy/tsuquyomi', { 'do': 'npm install -g typescript' }
-  "Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+  Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+  Plug 'Quramy/tsuquyomi', { 'do': 'npm install -g typescript' }
+  Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 call plug#end()
 
-colorscheme nord 
+colorscheme gruvbox
 
 " PLUGIN SETTINGS
 " deoplete
@@ -95,9 +91,9 @@ let g:tern_request_timeout = 6000
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
 " tsuquyomi 
-"let g:tsuquyomi_javascript_support = 1
-"let g:tsuquyomi_auto_open = 1
-"let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_javascript_support = 1
+let g:tsuquyomi_auto_open = 1
+let g:tsuquyomi_disable_quickfix = 1
 " emmet
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
@@ -106,7 +102,7 @@ let g:user_emmet_settings = {
   \}
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'one',
       \ }
 " ale
 let g:ale_fixers = {
