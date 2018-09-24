@@ -2,9 +2,9 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": true,
     "editor.fontLigatures": true,
-    "editor.fontFamily": "Terminus, Hack",
+    "editor.fontFamily": "Hack",
     "editor.fontSize": 16,
     "window.zoomLevel": -1,
     "editor.tabSize": 2,
@@ -18,7 +18,7 @@
     "emmet.triggerExpansionOnTab": true,
     // "workbench.colorTheme": "Gruvbox Dark (Hard)",
     // "workbench.colorTheme": "September Steel",
-    "workbench.colorTheme": "Nord",
+    "workbench.colorTheme": "Verdandi",
     "workbench.sideBar.location": "left",
     "workbench.editor.showTabs": true,
     "editor.minimap.enabled": false,
@@ -47,6 +47,6 @@
             "before": ["j", "k"],
             "after": ["<Esc>"]
         }
-    ]
-
-}
+    ],
+    "workbench.fontAliasing": "antialiased"
+  }

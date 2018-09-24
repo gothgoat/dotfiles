@@ -18,7 +18,6 @@ set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set visualbell
 set noerrorbells
-set background=dark
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -50,11 +49,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'w0rp/ale'
   Plug 'airblade/vim-gitgutter'
-  Plug 'itchyny/lightline.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'jiangmiao/auto-pairs'
   Plug 'morhetz/gruvbox'
-  Plug 'sheerun/vim-polyglot'
+  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html', 'vue'] }
+  Plug 'mxw/vim-jsx'
+  Plug 'elzr/vim-json'
+  Plug 'posva/vim-vue'
   Plug 'mattn/emmet-vim'
   Plug 'romainl/vim-qf'
   Plug 'Shougo/deoplete.nvim'
@@ -65,7 +66,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 call plug#end()
 
-colorscheme gruvbox
+colorscheme nord
 
 " PLUGIN SETTINGS
 " deoplete
@@ -100,10 +101,6 @@ let g:user_emmet_settings = {
     \      'extends' : 'jsx',
     \  },
   \}
-" lightline
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ }
 " ale
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
