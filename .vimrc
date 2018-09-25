@@ -21,7 +21,6 @@ set noerrorbells
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set showcmd
 set cursorline
 set wildmode=longest,list,full
 set wildmenu
@@ -34,6 +33,12 @@ set foldlevelstart=1
 set pastetoggle=<F2>
 set updatetime=100
 
+"minimal vim
+set noshowmode
+set noruler
+set laststatus=0
+set noshowcmd
+
 filetype plugin indent on
 syntax enable
 
@@ -43,7 +48,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'morhetz/gruvbox'
   Plug 'andreypopp/vim-colors-plain'
   Plug 'jeetsukumaran/vim-filebeagle'
-  Plug 'ap/vim-buftabline'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdcommenter'
@@ -67,8 +71,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 call plug#end()
 
-set background=light
-colorscheme plain
+set background=dark
+colorscheme gruvbox 
 
 " PLUGIN SETTINGS
 " deoplete
