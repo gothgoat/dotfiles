@@ -113,8 +113,8 @@ let g:ale_fixers = {
 \   'jsx': ['eslint'],
 \   'vue': ['eslint'],
 \}
-let g:ale_open_list = 1
-let g:ale_list_window_size = 2
+"let g:ale_open_list = 1
+"let g:ale_list_window_size = 2
 " jsx
 let g:jsx_ext_required = 0
 " surround 
@@ -143,8 +143,6 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType vue syntax sync fromstart
 autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " KEYBINDS
 inoremap jk <esc>
@@ -170,3 +168,5 @@ nmap yss <Plug>Yssurround
 nmap ySs <Plug>YSsurround
 nmap ySS <Plug>YSsurround
 xmap S   <Plug>VSurround
+nmap <silent> <leader>aj :ALENext<cr>
+nmap <silent> <leader>ak :ALEPrevious<cr>
