@@ -3,9 +3,8 @@
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
     "workbench.editor.enablePreview": true,
-    "editor.fontLigatures": true,
-    "editor.fontFamily": "Hack",
-    "editor.fontSize": 16,
+    "editor.fontFamily": "hack",
+    "editor.fontSize": 14,
     "window.zoomLevel": -1,
     "editor.tabSize": 2,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -20,7 +19,6 @@
     // "workbench.colorTheme": "September Steel",
     "workbench.colorTheme": "Verdandi",
     "workbench.sideBar.location": "left",
-    "workbench.editor.showTabs": true,
     "editor.minimap.enabled": false,
     "eslint.enable": true,
     "eslint.validate": [
@@ -48,5 +46,6 @@
             "after": ["<Esc>"]
         }
     ],
-    "workbench.fontAliasing": "antialiased"
+    "workbench.fontAliasing": "antialiased",
+    "editor.renderIndentGuides": false
   }

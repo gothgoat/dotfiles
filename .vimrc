@@ -39,9 +39,11 @@ syntax enable
 
 " PLUGINS
 call plug#begin('~/.vim/plugged')
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'morhetz/gruvbox'
+  Plug 'andreypopp/vim-colors-plain'
   Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'ap/vim-buftabline'
-  Plug 'arcticicestudio/nord-vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdcommenter'
@@ -51,7 +53,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'easymotion/vim-easymotion'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'morhetz/gruvbox'
   Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html', 'vue'] }
   Plug 'mxw/vim-jsx'
   Plug 'elzr/vim-json'
@@ -66,7 +67,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 call plug#end()
 
-colorscheme nord
+set background=light
+colorscheme plain
 
 " PLUGIN SETTINGS
 " deoplete
@@ -113,6 +115,21 @@ let g:ale_list_window_size = 2
 let g:jsx_ext_required = 0
 " surround 
 let g:surround_no_mappings = 1
+" fzf
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+\ 'bg':      ['bg', 'Normal'],
+\ 'hl':      ['fg', 'Comment'],
+\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+\ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+\ 'hl+':     ['fg', 'Statement'],
+\ 'info':    ['fg', 'PreProc'],
+\ 'border':  ['fg', 'Ignore'],
+\ 'prompt':  ['fg', 'Conditional'],
+\ 'pointer': ['fg', 'Exception'],
+\ 'marker':  ['fg', 'Keyword'],
+\ 'spinner': ['fg', 'Label'],
+\ 'header':  ['fg', 'Comment'] }
 
 " AUTOCMD
 autocmd BufEnter * silent! lcd %:p:h
@@ -121,6 +138,9 @@ autocmd FileType css,sass,scss setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType vue syntax sync fromstart
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " KEYBINDS
 inoremap jk <esc>
