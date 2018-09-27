@@ -32,6 +32,7 @@ set foldmethod=manual
 set foldlevelstart=1
 set pastetoggle=<F2>
 set updatetime=100
+set whichwrap+=<,>,h,l,[,]
 
 "minimal vim
 set noshowmode
@@ -47,6 +48,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'arcticicestudio/nord-vim'
   Plug 'morhetz/gruvbox'
   Plug 'andreypopp/vim-colors-plain'
+  Plug 'junegunn/goyo.vim'
   Plug 'jeetsukumaran/vim-filebeagle'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
@@ -71,8 +73,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 call plug#end()
 
-set background=dark
-colorscheme gruvbox 
+colorscheme nord
 
 " PLUGIN SETTINGS
 " deoplete
@@ -158,7 +159,6 @@ map <leader>b :Buffers<cr>
 map <leader>' :Files<cr>
 map <leader>g :GFiles<cr>
 map <leader>t :Tags<cr>
-map <leader>a <Plug>(ale_fix)
 imap <c-q> <plug>(fzf-complete-line)
 nmap ds  <Plug>Dsurround
 nmap Cs  <Plug>Csurround
@@ -168,5 +168,8 @@ nmap yss <Plug>Yssurround
 nmap ySs <Plug>YSsurround
 nmap ySS <Plug>YSsurround
 xmap S   <Plug>VSurround
-nmap <silent> <leader>aj :ALENext<cr>
-nmap <silent> <leader>ak :ALEPrevious<cr>
+map <leader>a <Plug>(ale_fix)
+nmap <silent> <leader>j :ALENext<cr>
+nmap <silent> <leader>k :ALEPrevious<cr>
+map <leader>l :lop 2<CR>
+map <leader>c :lcl<CR>
