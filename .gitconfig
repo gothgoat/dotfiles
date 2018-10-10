@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = zoltan
+	email = zofejes@gmail.com
+[credential]
+	helper = osxkeychain
+[color]
+	ui = always
+[alias]
+	tree = log --graph --full-history --all --color --date=short --pretty=format:\"%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset\"
+[core]
+	pager = cat
+	excludesfile = /Users/fezo/.global_ignore
+[log]
+  decorate = true
