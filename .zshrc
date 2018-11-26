@@ -22,7 +22,9 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="minimal"
+ZSH_THEME="zero"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -116,14 +118,12 @@ export NVM_DIR="$HOME/.nvm"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias opc="open -a 'Google Chrome'"
 alias lst="tree -I 'node*'"
-alias lsl="ls -la"
+alias lsl="ls -lart"
 
-
+alias jtags="ctags -R app config lib src tags"
 
 export TERM=xterm-256color
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
   # Set Spaceship ZSH as a prompt
-  autoload -U promptinit; promptinit
-  prompt spaceship

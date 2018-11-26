@@ -2,7 +2,7 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
-    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreview": false,
     "editor.fontFamily": "hack",
     "editor.fontSize": 14,
     "window.zoomLevel": -1,
@@ -15,9 +15,6 @@
         "javascript": "javascriptreact"  
     },
     "emmet.triggerExpansionOnTab": true,
-    // "workbench.colorTheme": "Gruvbox Dark (Hard)",
-    // "workbench.colorTheme": "September Steel",
-    "workbench.colorTheme": "Verdandi",
     "workbench.sideBar.location": "left",
     "editor.minimap.enabled": false,
     "eslint.enable": true,
@@ -35,17 +32,25 @@
           "autoFix": true
         }
       ],
-      "vim.easymotion": true,
-      "vim.incsearch": true,
-      "vim.useSystemClipboard": true,
-      "vim.hlsearch": true,
-      "keyboard.dispatch": "keyCode",
-      "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
-        }
+    "vim.leader": "\\",
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "keyboard.dispatch": "keyCode",
+    "vim.insertModeKeyBindings": [
+      {
+          "before": ["j", "k"],
+          "after": ["<Esc>"]
+      }
     ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "<space>"],
+      "commands": [":nohl"]
+    }
+  ],
     "workbench.fontAliasing": "antialiased",
-    "editor.renderIndentGuides": false
+    "editor.renderIndentGuides": false,
+    "workbench.colorTheme": "Nord"
   }

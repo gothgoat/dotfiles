@@ -71,9 +71,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
   Plug 'Quramy/tsuquyomi', { 'do': 'npm install -g typescript' }
   Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+  Plug 'epilande/vim-es2015-snippets'
+  Plug 'epilande/vim-react-snippets'
+  Plug 'SirVer/ultisnips'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  Plug 'sjl/gundo.vim'
 call plug#end()
 
-colorscheme nord
+set background=dark
+colorscheme plain
 
 " PLUGIN SETTINGS
 " deoplete
@@ -152,7 +158,7 @@ nnoremap <C-l> :bnext<CR>
 nnoremap <C-h> :bprevious<CR>
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
-nnoremap c :bp\|bd #<CR>
+nnoremap <C-c> :bp\|bd #<CR>
 nnoremap <leader><space> :nohlsearch<CR>
 map <leader>s :syntax sync fromstart<CR>
 map <leader>b :Buffers<cr>
@@ -173,3 +179,4 @@ nmap <silent> <leader>j :ALENext<cr>
 nmap <silent> <leader>k :ALEPrevious<cr>
 map <leader>l :lop 2<CR>
 map <leader>c :lcl<CR>
+nnoremap <leader>u :GundoToggle<CR>
