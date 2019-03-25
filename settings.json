@@ -1,10 +1,8 @@
 {
     "workbench.iconTheme": "vscode-icons",
-    "workbench.statusBar.visible": true,
+    "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": false,
-    "workbench.editor.enablePreview": false,
     "editor.fontFamily": "hack",
-    "editor.fontSize": 14,
     "window.zoomLevel": -1,
     "editor.tabSize": 2,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -52,5 +50,6 @@
   ],
     "workbench.fontAliasing": "antialiased",
     "editor.renderIndentGuides": false,
-    "workbench.colorTheme": "Nord"
+    "workbench.colorTheme": "Carbonnight",
+    "editor.fontSize": 13
   }
